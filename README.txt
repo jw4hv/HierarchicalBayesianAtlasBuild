@@ -12,6 +12,6 @@ Bayesian Atlas Building with Hierarchical Priors for Subject-specific Regulariza
 Jian Wang, Miaomiao Zhang.  MICCAI, 2021.
 
 Frequency diffeomorphisms for efficient image registration.
-Miaomiao Zhang et al.. Information Processing in Medical Imaging (IPMI), 2017.
+Miaomiao Zhang et al. Information Processing in Medical Imaging (IPMI), 2017.
 
 
