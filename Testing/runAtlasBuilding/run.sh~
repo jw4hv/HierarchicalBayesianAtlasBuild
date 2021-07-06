@@ -1,0 +1,34 @@
+#!/bin/sh
+MPIDIR=/usr/lib64/mpi/gcc/openmpi
+numProcessor=1
+
+execPath="/home/sci/miaomiao/Research/flashc-bin/Testing"
+dataPath="/home/sci/miaomiao/Research/shapeVariability/code/Test/data/oasisbrain/3D/training"
+resultPath="/home/sci/miaomiao/Research/ipmi-result"
+suffix=".mhd"
+numStep=10
+lpower=3
+truncX=32
+truncY=32
+truncZ=32 # if 2D, pass z as 1
+sigma=0.03
+alpha=3.0
+gamma=1.0
+maxIter=1
+stepSizeGD=5.0e-2
+mType=0 # 0: Host; 1: DEVICE
+EmIter=65
+
+#================================================
+# collect all the filename in the directory
+#AtlasFileDir=$dataPath/"*"$suffix
+AtlasFileDir=$(find $dataPath -name "wmri_1.mhd")
+AtlasResultDir=$resultPath/"v0"
+if [ ! -d $AtlasResultDir ]
+then
+    mkdir $AtlasResultDir
+fi
+
+echo "Atlas building..."
+
+${MPIDIR}/bin/mpirun -np ${numProcessor} ${execPath}/AtlasBuildingTest ${suffix} ${AtlasResultDir} ${numStep} ${lpower} ${truncX} ${truncY} ${truncZ} ${sigma} ${alpha} ${gamma} ${maxIter} ${stepSizeGD} ${mType} ${EmIter} ${AtlasFileDir}
