@@ -10,7 +10,7 @@
   The version of Armadillo >= 3.920
 
 * Step 2:
-  Open a shell (command line), change into the code directory flashc, and
+  Open a shell (command line), change into the source code directory, and
   type the following commands:
   
   1) ccmake .
@@ -23,4 +23,4 @@
 
 * Executable files (e.g.ImageMatchingTest) should be generated if built succesfully.
 
-* Bash scripts are under the source code folder flashc/Testing/run***/ for executing the program.   
+* Bash scripts are under the source code folder HierarchicalBayesianAtlasBuilding/Testing/run***/ for executing the program.   
