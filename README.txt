@@ -9,7 +9,7 @@ This code is only for research purpose, and we request
 you to cite our research paper if you use it:
 
 Bayesian Atlas Building with Hierarchical Priors for Subject-specific Regularization.
-Jian Wang, Miaomiao Zhang.  MICCAI, 2021.
+Jian Wang, Miaomiao Zhang. Medical Image Computing and Computer Assisted Intervention (MICCAI), 2021.
 
 Frequency diffeomorphisms for efficient image registration.
 Miaomiao Zhang et al. Information Processing in Medical Imaging (IPMI), 2017.
